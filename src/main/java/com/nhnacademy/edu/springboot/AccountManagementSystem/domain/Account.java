@@ -1,15 +1,28 @@
 package com.nhnacademy.edu.springboot.AccountManagementSystem.domain;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@ToString
-public class Account {
-    private final String number;
-    private final Integer balance;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-    public Account(String number, Integer balance) {
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+@Entity
+public class Account {
+    @Id
+    private Long id;
+    private String number;
+    private Integer balance;
+
+    public Account() {}
+
+    public Account(Long id, String number, Integer balance) {
+        this.id = id;
         this.number = number;
         this.balance = balance;
     }
