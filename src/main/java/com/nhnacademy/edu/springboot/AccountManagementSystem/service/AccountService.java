@@ -3,6 +3,7 @@ package com.nhnacademy.edu.springboot.AccountManagementSystem.service;
 import com.nhnacademy.edu.springboot.AccountManagementSystem.domain.Account;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface AccountService {
 
@@ -15,4 +16,3 @@ public interface AccountService {
     void deleteAccount(Long id);
 
 }
- 
