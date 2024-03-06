@@ -15,4 +15,4 @@ Content-Type: application/json
 }
 
 ### DELETE /accounts/{id}
-DELETE http://localhost:8080/accounts/1
+DELETE http://localhost:8080/accounts/4
