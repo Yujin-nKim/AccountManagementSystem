@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class AccountControllerTest {
+public class AccountControllerTest_mock {
 
     @Autowired
     private MockMvc mockMvc;
@@ -36,10 +36,10 @@ public class AccountControllerTest {
     @Test
     @Order(2)
     void testGetAccount() throws Exception {
-        mockMvc.perform(get("/accounts/{id}", 2L))
+        mockMvc.perform(get("/accounts/{id}", 1L))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.balance", equalTo(1)));
+                .andExpect(jsonPath("$.balance", equalTo(13333)));
     }
 
     @Test
